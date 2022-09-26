@@ -15,3 +15,14 @@ npm install body-parser cookie-parser debug ejs express morgan serve-favicon exp
 ```angular2html
 
 ```
+
+# 创建服务
+express + mongoose
+```javascript
+let express = require('express')
+let app = express()
+app.listen('8070')
+```
+
+# 跑通路由
+
