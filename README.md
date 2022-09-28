@@ -6,10 +6,10 @@ npm init -y
 
 # 安装依赖的模块
 ```angular2html
-npm install body-parser cookie-parser debug ejs express morgan serve-favicon express-session connect-mongo mongoose connect-flash multer async -S
+npm install body-parser cookie-parser debug ejs express morgan serve-favicon express-session connect-mongo mongoose connect-flash multer async bootstrap -S
 ```
---save-dev = -D
---save = -S
+- -save-dev = -D
+- -save = -S
 
 # 创建并初始化git
 ```angular2html
@@ -25,4 +25,5 @@ app.listen('8070')
 ```
 
 # 跑通路由
+# 引入模板引擎
 

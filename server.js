@@ -1,5 +1,18 @@
 let express = require('express')
+let path = require('path')
 let app = express()
+// 设置模板引擎html
+app.set('view engine','html')
+// 指定模板的存放根目录
+app.set('views',path.resolve('views'))
+// 指定对于html类型的模板使用ejs方法来进行渲染
+app.engine('html',require('ejs').__express)
+
+// 此静态文件件会拦截到客户端对于静态文件的请求如bootstrap.css，然后会在当前目录的node_modules目录下寻找到文件，如果能找到则返回客户端并结束请求
+app.use(express.static(path.resolve('node_modules')))
+//app.use('/static', express.static('public')) 可以设置虚拟路径
+// 例如：http://localhost:8070/static/images/kitten.jpg
+
 let index = require('./routes/index')
 let user = require('./routes/user')
 let article = require('./routes/article')
